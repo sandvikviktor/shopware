@@ -20,7 +20,7 @@ export default {
   background-color: rgb(29, 29, 29);
   color: white;
 }
-#home:before{
+#home:after{
   position: fixed;
   content: '';
   top: 0;
@@ -30,9 +30,6 @@ export default {
   background-image: url('../assets/shopware.png');
   background-position: center;
   background-size: cover;
-}
-hr{
-  width: 90%;
 }
 h1{
   font-size: 3.5rem;
@@ -50,25 +47,28 @@ p{
 @media (max-height: 768px), (min-width: 900px) {
   #home:after {
     transform: scale(0.9);
-    right: -7em;
-    bottom: -5em;
+    right: -5em;
+    bottom: -3em;
   }
   .jumbo{
     margin-left: 10em;
   }
   h1{
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   p{
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 578px) {
-    #home:after {
+    /* #home:after {
     transform: scale(0.6);
     left: -40em;
     right: -18em;
     bottom: -14em;
+  } */
+  #home:after{
+    background-image: none;
   }
   /* #home:after{
   content: '';

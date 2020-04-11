@@ -1,6 +1,6 @@
 <template>
-  <div id="register" class="vh-100 d-flex align-items-center mt-4">
-    <div class="container my-5 py-5 ml-16 z-10">
+  <div id="register" class="vh-100 w-100 d-flex align-items-center pt-5">
+    <div class="container my-5 py-5 ml z-10">
       <!--Section: Content-->
       <section class="px-md-5 mx-md-5 text-center text-lg-left">
         <!--Grid row-->
@@ -116,10 +116,20 @@ export default {
   background-position: center;
   background-size: cover;
 }
-.ml-16{
+.ml{
   margin-left: 13em;
 }
 .z-10{
   z-index: 10;
+}
+@media (max-height: 768px), (min-width: 900px) {
+  .ml {
+    margin-left: 5em;
+  }
+  #register:after {
+    transform: scale(0.9);
+    right: -5em;
+    bottom: -3em;
+  }
 }
 </style>

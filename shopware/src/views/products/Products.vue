@@ -47,4 +47,11 @@ export default {
   bottom: 0;
   /* backdrop-filter: blur(10px); */
 }
+@media (max-height: 768px), (min-width: 900px) {
+  #products:before {
+    transform: scale(0.9);
+    right: -5em;
+    bottom: -3em;
+    }
+}
 </style>
