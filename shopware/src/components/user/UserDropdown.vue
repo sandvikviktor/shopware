@@ -3,13 +3,21 @@
     <!-- User inlogged -->
     <ul v-if="userInlogged" class="list-group list-group-flush">
       <li class="list-group-item">
-          <router-link to="/manage">
-            <div>
-              <i class="fas fa-user"></i>
-              <div>Mitt konto</div>
-            </div>
-          </router-link>
-        </li>
+        <router-link to="/manage">
+          <div>
+            <i class="fas fa-user"></i>
+            <div>Mitt konto</div>
+          </div>
+        </router-link>
+      </li>
+      <li class="list-group-item">
+        <router-link to="/orders">
+          <div>
+            <i class="fas fa-clipboard-list"></i>
+            <div>Mina ordrar</div>
+          </div>
+        </router-link>
+      </li>
       <li class="list-group-item">
         <router-link v-on:click.native="userLogout" to="/login">
           <div>
@@ -17,7 +25,7 @@
             <div>Logga ut</div>
           </div>
         </router-link>
-      </li>      
+      </li>
     </ul>
     <!-- User not inlogged -->
     <ul v-else class="list-group list-group-flush">
@@ -36,7 +44,7 @@
             <div>Logga in</div>
           </div>
         </router-link>
-      </li>           
+      </li>
     </ul>
   </div>
 </template>
@@ -55,17 +63,17 @@ export default {
 </script>
 
 <style scoped>
-.list-group-item{
-  padding: 0.3em !important;
+.list-group-item {
+  padding: 0.2em;
 }
-a{
+a {
   font-weight: 500 !important;
 }
-i{
+i {
   font-weight: 500;
   font-size: 1.2rem;
 }
-a:hover i{
+a:hover i {
   transition: 0.3s ease;
   transform: scale(1.1);
 }
